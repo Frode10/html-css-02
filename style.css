@@ -1,0 +1,364 @@
+* {
+    margin:0; /* setter margin til 0 */
+    padding:0; /* Setter alle default padding til 0 */
+    box-sizing: border-box; /* inkluderer paddding i box width */
+}
+
+:root {
+
+    --black:rgb(33, 33, 33); /* var(--black); defaul rgb(33, 33, 33) */
+    --red:rgb(193, 11, 15); /* var(--red); default rgb(193, 11, 15)*/
+    --info-section:rgb(33, 33, 33); /* var(--info-section); */
+    --footer:rgb(9, 136, 11); /* var(--footer); */
+    --button:rgb(9, 136, 11); /* var(--button); */
+    --button-hover:rgb(14, 202, 17); /* var(--button-hover); */
+
+    
+}
+
+html {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    background-color: var(--red);    
+    font-size: 10px;
+    font-family:Poppins, serif;
+
+    position:relative;
+}
+
+body {
+    font-weight: 300;
+   width: 100%;
+    max-width: 1280px;
+}
+
+main {
+    width: 100%;
+}
+h1 {
+    font-size: 5rem;
+    line-height: 1;
+    color:var(--red);
+}
+
+/* h2 er i footer */
+
+h3 {
+    font-size:2rem;
+    background-color: var(--red);
+    color:whitesmoke;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    padding:1rem 2rem;
+    border-radius: 4px;
+}
+
+h4 {
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 1px;
+    color:whitesmoke;
+    text-align: center;
+}
+p {
+    font-size:1.7rem;
+    line-height: 1.5;
+    padding-left:1rem;
+    padding-right: 1rem;
+}
+/* span sort tekst på hovedtekst alfa romeo...*/
+.sort-text {
+    color:var(--black);
+}
+
+/* header hele meny */
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+    width:100%;
+    background-color: var(--red);
+    color:whitesmoke;
+    padding-right:5rem;
+    z-index:99; /* lager sticky menu som følger med når scroller */
+    position:sticky; /* sticky - se også header position absolute */
+    top:0; /* sticky */
+}
+
+.logo {
+    width:100px;
+    height:100px;
+}
+.logo img {
+    width:100%;
+    height:100%;
+    object-fit: contain;
+}
+.menu {
+    display:flex;
+    gap:2rem;
+    width:100%;
+    justify-content: space-around;
+    list-style: none;
+}
+.menu li {
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* BODY */
+
+.hero-wrapper {
+    width: 100%;
+    height: 400px;
+    background-color: var(--black);
+    
+}
+
+.hero-wrapper img {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section {
+    padding: 4rem 1rem 4rem 1rem;
+}
+
+#section-info {
+    background-color: var(--info-section);
+}
+/* bakgrunnsfarge for gallery section */
+#section-gallery {
+    background-color: whitesmoke;
+
+}
+
+/* Form send email kontakt */
+form {
+    display:flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin-top: 1rem;
+    background-color: lavender;
+    padding: 2rem;
+    border-radius: 4px;
+    
+}
+form button {
+    margin-top:1rem;
+}
+form label {
+    display:block; /* for å få label tekst over input*/
+    margin-bottom:1rem;
+    font-size: 1.5rem;
+}
+
+form input {
+    padding:1rem;
+    border:none;
+}
+form input:hover {
+   background-color: rgb(61, 255, 61);
+}
+
+
+.tre-kolonner {
+    display:flex;
+    width:100%;
+    gap:1rem;
+    background-color: whitesmoke;
+}
+
+
+
+.kolonne {
+    width: 33%;
+    padding:1rem;
+}
+/* 4 kolonner for bildegalleri */
+
+.fire-kolonner {
+    display:flex;
+    flex-direction: row;
+    width:100%;
+}
+.kolonne4 {
+    width: 25%;
+    padding:5px;
+    height: 100%;
+}
+.kolonne4 img {
+    border-radius: 4px;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
+
+
+.kolonne-center {
+    display:flex; /* presser button to bottom. button satt til margin-top auto  */
+    flex-direction: column; /* presser button to bottom. button satt til margin-top auto  */
+    min-height:150px; /* presser button to bottom. button satt til margin-top auto  */
+    width: 33%;
+    padding:2rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+button {
+    margin-top: auto; /* presser button to bottom. se kolonne-center  */
+    unset:all;
+    border:none;
+    background-color: var(--button);
+    color:whitesmoke;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding:1rem 2rem;
+    border-radius: 4px;
+    border:1px solid transparent; /* for å unngå at button hopper når hover*/
+}
+
+button:hover {
+    background-color:var(--button-hover);
+    border:1px whitesmoke solid;
+}
+
+/* kontakt-seksjon */
+
+/* popup nederst tekst demopage - vi benytter... */
+.demopage {
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left:60%;
+    max-width: 400px;
+    z-index: 199;
+    position: sticky;
+    bottom:0;
+    width:100%;
+    background-color: var(--red);
+    color:whitesmoke;
+    padding: 1rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    
+}
+
+section.gallery2 {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding:0;
+    gap:2%;
+    width:100%;
+    
+    background-color: black;
+    
+}
+
+section.gallery2 img {
+    width:32%;
+}
+
+footer {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-height:100px;
+    background-color:black;
+    padding:2rem;
+    color:whitesmoke;
+}
+
+footer img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+footer h2 {
+    font-size: 3rem;
+    color: rgb(193, 11, 15);
+    
+}
+
+span.green{
+    color:rgb(9, 136, 11);
+    margin-left:1rem;
+}
+span.white{
+    color:white;
+}
+
+@media screen and (max-width: 768px) {
+
+    header {
+        display:flex;
+        flex-direction: column;
+        padding:1.5rem;
+    }
+
+    h1{
+        font-size:4rem;
+    }
+    .logo {
+        margin:1.5rem;
+        width: 60px;
+        height: 60px;
+    }
+	.fire-kolonner {
+        display:flex;
+        flex-direction: column;
+        width:100%;
+    }
+    .tre-kolonner {
+        display: flex;
+        flex-direction: column;
+        width:100%;
+    }
+    .kolonne {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .kolonne-center {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .kolonne4 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height:100%;
+    }
+    h3 {
+        margin-top: 1rem;
+    }
+    .demopage {
+        display:none;
+        
+    }
+    section.gallery2 {
+        display:flex;
+        flex-direction: column;
+    }
+    section.gallery2 img {
+       width:100%;
+    }
+    footer h2 {
+        font-size: 1.5rem;
+    text-align: center;
+        
+    }
+}
